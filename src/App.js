@@ -188,7 +188,7 @@ function App() {
               <Rectangle width="w-full" height="h-full" borderWidth="border-4" bg="#000000">
                 <div className="relative h-full w-full">
                   <h1 className="text-7xl text-white absolute right-0 top-0 p-10">Experience</h1>
-                  <div className="absolute inset-0 flex items-center justify-center pt-32">
+                  <div className="absolute inset-0 flex items-center justify-center pt-40 pb-6">
                     <div className="grid grid-cols-2 gap-x-20 gap-y-10">
                       {experience.map((exp) => (
                         <motion.div
@@ -235,6 +235,21 @@ function App() {
                                   Go Back
                                 </button>
                               </>
+                            )}
+                            {/* Logo in bottom-left if provided */}
+                            {exp.image && (
+                              <a
+                                href={exp.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="absolute bottom-2 left-3"
+                              >
+                                <img
+                                  src={exp.image}
+                                  alt={`${exp.company} logo`}
+                                  className="w-12 h-12 object-contain rounded hover:scale-110 transition-transform duration-200"
+                                />
+                              </a>
                             )}
                           </div>
                         </motion.div>
