@@ -3,7 +3,7 @@ import Circuit from "./Circuit";
 
 const Simulator = () => {
     return (
-        <div className="flex flex-row h-full w-full p-4">
+        <div className="flex flex-row h-full w-full p-2 md:p-4">
             <Circuit />
         </div>
     )

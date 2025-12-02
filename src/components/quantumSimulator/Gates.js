@@ -20,7 +20,7 @@ const Gates = ({ onGateClick }) => {
     };
 
     return (
-        <div className="h-64 w-36 relative inline-block bg-gradient-to-r from-white to-gray-400 rounded-lg p-[2px]">
+        <div className="h-56 md:h-64 w-32 md:w-36 relative inline-block bg-gradient-to-r from-white to-gray-400 rounded-lg p-[2px]">
             <div className="flex flex-wrap justify-center items-center bg-black rounded-md p-2 h-full w-full">
                 {gates.map((gate, index) => (
                     <div
@@ -36,7 +36,7 @@ const Gates = ({ onGateClick }) => {
             </div>
             {hoveredGate && (
                 <div
-                    className="absolute bg-gray-800 text-white text-sm py-1 px-3 rounded-lg shadow-md"
+                    className="absolute bg-gray-800 text-white text-xs md:text-sm py-1 px-3 rounded-lg shadow-md z-50"
                     style={{
                         top: cursorPosition.y - 400, // Adjust this value to position the popup above the cursor
                         left: cursorPosition.x,

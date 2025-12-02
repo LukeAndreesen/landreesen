@@ -36,7 +36,12 @@ const Graph = ({ probs }) => {
       },
     },
     layout: {
-      padding: 0,
+      padding: {
+        top: 25,
+        bottom: 10,
+        left: 5,
+        right: 5,
+      },
     },
     scales: {
       x: {

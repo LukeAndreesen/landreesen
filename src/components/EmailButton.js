@@ -16,7 +16,7 @@ const EmailButton = ({ text }) => {
       {/* Gradient Border Wrapper */}
       <div className="relative w-auto inline-block bg-gradient-to-r from-white to-gray-400 rounded-full p-[2px]">
         <button
-          className="px-10 py-4 text-xl text-white bg-black rounded-full flex items-center justify-center hover:bg-white hover:text-black"
+          className="px-6 md:px-10 py-3 md:py-4 text-base md:text-xl text-white bg-black rounded-full flex items-center justify-center hover:bg-white hover:text-black"
           onClick={handleCopy}
         >
           {text}
@@ -24,7 +24,7 @@ const EmailButton = ({ text }) => {
       </div>
       {/* Popup Notification */}
       {showPopup && (
-        <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm py-2 px-4 rounded-lg shadow-md text-center">
+        <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs md:text-sm py-2 px-4 rounded-lg shadow-md text-center">
           Copied to clipboard!
         </div>
       )}

@@ -15,7 +15,7 @@ const SquareGate = ({ gate, onClick }) => {
     
     return (
         <div
-        className={`flex items-center justify-center w-12 h-12 rounded-md text-white text-xl font-semibold cursor-pointer`}
+        className={`flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-md text-white text-lg md:text-xl font-semibold cursor-pointer`}
         style={{ backgroundColor }}
         onClick={onClick}
         >

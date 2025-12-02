@@ -52,13 +52,13 @@ const Circuit = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-full w-full">
-            <div className="flex flex-row items-center justify-center w-full">
-                <div className="mt-2 ml-4">
+        <div className="flex flex-col items-center justify-center h-full w-full overflow-x-hidden">
+            <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-full overflow-visible md:overflow-x-hidden px-2 md:px-0">
+                <div className="mt-2 ml-0 md:ml-4">
                     <Gates onGateClick={handleGateClick} />
                 </div>
-                <div className="flex flex-col items-center h-full w-full ml-20 space-y-2">
-                <div className="text-white text-md mb-4">Select a qubit, then click on gates to add to circuit.</div>
+                <div className="flex flex-col items-center h-full w-full ml-0 md:ml-20 space-y-2 mt-2 md:mt-0 overflow-visible px-2 md:px-0">
+                <div className="text-white text-sm md:text-md mb-2 md:mb-4 px-4 text-center">Click on a qubit line to select it, then click on gates to add to circuit.</div>
                     {qubits.map((gates, index) => (
                         <Qubit
                             key={index}
@@ -69,13 +69,14 @@ const Circuit = () => {
                         />
                     ))}
                 </div>
-                <div className="flex flex-col items-center justify-center h-full w-full">
-                    <div className="flex items-center justify-center h-[500px] w-[500px]">
+                <div className="flex flex-col items-center justify-center h-full w-full mt-4 md:mt-0 overflow-x-hidden px-2 md:px-0">
+                    <div className="flex items-center justify-center h-[380px] md:h-[500px] w-full md:w-[500px] px-2 md:px-4 pt-8 md:pt-0">
                         <Graph probs={probs} />
                     </div>
                 </div>
             </div>
-            <div className="text-white text-3xl">{finalState && `Final State: ${finalState}`}</div>
+            <div className="text-white text-lg md:text-3xl mt-4 px-4 text-center">{finalState && `Final State: ${finalState}`}</div>
+            <div className="text-white text-xs mt-2 px-4 text-center md:hidden opacity-70">Optimized for desktop :)</div>
         </div>
     );
 };
