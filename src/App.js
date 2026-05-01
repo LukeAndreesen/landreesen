@@ -298,12 +298,9 @@ function App() {
                   <div>
                     <p className="eyebrow mb-3">Experience</p>
                     <h2 className="text-3xl font-semibold leading-tight text-white md:text-6xl">
-                      Applied technical work across quantum, data, and software.
+                      Professional Experience
                     </h2>
                   </div>
-                  <p className="section-copy text-sm md:max-w-md md:text-base">
-                    A condensed view of roles and projects. Select a card for a short summary, or open the company link from its logo.
-                  </p>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
